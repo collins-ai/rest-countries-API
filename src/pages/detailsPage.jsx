@@ -19,8 +19,8 @@ const DetailsPage = () => {
           <BiArrowBack className="text-gray-900 text-xl dark:text-white" />
           <span className="text-gray-700 text-lg dark:text-gray-400">Back</span>
         </Link>
-        <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
-          <img src={item?.flag} alt={item?.name} />
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-20">
+          <img src={item?.flag} alt={item?.name} className="lg:w-1/2 lg:h-100" />
           <div className="text-gray-900 flex flex-col gap-5 dark:text-white">
             <p className="text-lg font-bold">{item?.name}</p>
             <div className="flex flex-col gap-10 mb-3 sm:flex-row sm:gap-20 sm:mb-10">
