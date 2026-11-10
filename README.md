@@ -23,7 +23,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/collins-ai/rest-countries-API.git)
-- Live Site URL: [Add live site URL here](https://rest-countries-api-orpin.vercel.app/)
+- Live Site URL: [Add live site URL here](https://rest-countries-api-1w87.vercel.app/)
 
 ### Built with
 
