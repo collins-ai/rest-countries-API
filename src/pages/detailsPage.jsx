@@ -1,7 +1,6 @@
 import { Link, useParams } from "react-router"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import Header from "../header"
-import UseFetch from "../useFetch"
 import { countriesContext } from "../countriesContext"
 import { BiArrowBack } from "react-icons/bi"
 
@@ -15,14 +14,14 @@ const DetailsPage = () => {
   return (
     <div>
       <Header />
-      <main className="bg-gray-800 min-h-screen px-5 py-10 flex flex-col items-start gap-15 sm:p-15">
-        <Link to={`/`} className="bg-gray-700 flex items-center gap-2 px-5 py-1 rounded-md border-2 border-gray-900">
-          <BiArrowBack className="text-white text-xl" />
-          <span className="text-gray-400 text-lg">Back</span>
+      <main className="bg-white min-h-screen px-5 py-10 flex flex-col items-start gap-15 sm:p-15 dark:bg-gray-800">
+        <Link to={`/`} className="bg-white flex items-center gap-2 px-5 py-1 rounded-md border-2 border-gray-300 dark:bg-gray-700 dark:border-gray-900">
+          <BiArrowBack className="text-gray-900 text-xl dark:text-white" />
+          <span className="text-gray-700 text-lg dark:text-gray-400">Back</span>
         </Link>
         <div className="flex flex-col gap-10 sm:flex-row sm:gap-20">
-          <img src={`/ax.svg`} alt={item?.name} />
-          <div className="text-white flex flex-col gap-5">
+          <img src={item?.flag} alt={item?.name} />
+          <div className="text-gray-900 flex flex-col gap-5 dark:text-white">
             <p className="text-lg font-bold">{item?.name}</p>
             <div className="flex flex-col gap-10 mb-3 sm:flex-row sm:gap-20 sm:mb-10">
               <div className="flex flex-col gap-1">
@@ -42,7 +41,7 @@ const DetailsPage = () => {
               <p className="text-lg">Border Countries:</p>
               <div className="flex flex-wrap gap-3">
                 {item?.borders?.map(border => 
-                  <span key={border} className="bg-gray-700 text-gray-400 text-center w-27 py-1 rounded-md">{border}</span>
+                  <button key={border} className="bg-white text-gray-700 text-center w-27 py-1 rounded-md border-2 border-gray-300 cursor-pointer dark:bg-gray-700 dark:text-gray-400 dark:border-gray-900">{border}</button>
                 )}
               </div>
             </div>
