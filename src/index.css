@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.data, .dark *));
+
+.card {
+    flex: 0 0 calc((100% - 180px) / 4);
+}
