@@ -5,6 +5,9 @@
     scroll-behavior: smooth;
 }
 
-.card {
+@utility smcard {
+    flex: 0 0 calc((100% - 120px) / 3);
+}
+@utility lgcard {
     flex: 0 0 calc((100% - 180px) / 4);
 }

@@ -42,8 +42,8 @@ const HomePage = () => {
         </div>
         <div className="flex flex-col gap-10 px-5 sm:flex-row sm:flex-wrap sm:px-0 sm:gap-15">
           {filteredData.map(item => 
-            <Link to={`/details/${item.name}`} key={item.name} className="bg-white text-gray-900 rounded-md card shadow-sm shadow-gray-200 dark:bg-gray-700 dark:text-white dark:shadow-gray-900">
-              <img src={item.flag} alt={item.name} className="rounded-t-md" />
+            <Link to={`/details/${item.name}`} key={item.name} className="bg-white text-gray-900 rounded-md shadow-sm shadow-gray-200 sm:smcard lg:lgcard dark:bg-gray-700 dark:text-white dark:shadow-gray-900">
+              <img src={item.flag} alt={item.name} className="w-full h-50 object-cover rounded-t-md" />
               <div className="p-5 pb-10">
                 <h2 className="text-lg font-bold mb-3">{item.name}</h2>
                 <p>Population: <span className="text-gray-400">{item.population}</span></p>
